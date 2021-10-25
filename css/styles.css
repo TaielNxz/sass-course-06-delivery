@@ -7,7 +7,8 @@
 
     --primary: hsl(356, 77%, 61%);
     --primaryDark: hsl(356, 77%, 56%);
-    --secondary: #455a64; 
+    --secondary: hsl(199, 18%, 33%); 
+    --secondaryDark: hsl(199, 18%, 23%); 
     --black: #000;
     --white: #FFFFFF;
     --lightGrey: #eceeef;
@@ -38,6 +39,16 @@ p {
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.btn {
+    border: none;
+    border-radius: 1rem;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s ease;
 }
 
 a {
@@ -113,19 +124,89 @@ h3 {
 }
 
 .link-register {
-    padding: 1rem 3rem;
-    display: block;
-
     background-color: var(--primary);
     color: var(--white);
-
-    border: none;
-    border-radius: 1rem;
-    
-    transition: background-color .3s ease;
+    padding: 1rem 3rem;
 }
 
 .link-register:hover {
     background-color: var(--primaryDark);
     font-weight: 700;
+}
+
+/* ==== form ==== */
+
+.form {
+    width: 100%;
+}
+
+.form-grid {
+    display: grid;
+    gap: var(--separation);
+}
+
+@media (min-width: 768px) {
+    .form {
+        width: 95%;
+    }
+    .form-grid {
+        grid-template-columns: repeat( 2, 1fr );
+    }
+}
+
+.form-content {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: var(--separation);
+}
+
+@media (min-width: 768px) {
+    .form-content {
+        padding: calc( var(--separation) * 2 ) var(--separation);
+    }
+}
+
+.form-content .heading {
+    text-align: center;
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.field input {
+    width: 100%;
+    padding: 1rem;
+}
+
+.submit {
+    background-color: var(--secondary);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    width: 100%;
+    transition: background-color .3s ease;
+}
+
+.submit:hover {
+    background-color: var(--secondaryDark);
+}
+
+.form-img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .form-img {
+        width: 100%;
+        margin-top: auto;
+    }
 }
