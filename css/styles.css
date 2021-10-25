@@ -454,3 +454,57 @@ h3 {
         width: 50%;
     }
 }
+
+/* ==== app ==== */
+
+.app {
+    background-color: var(--lightGrey);
+    padding: var(--separation) 0;
+}
+
+.app-grid {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .app-grid {
+        grid-template-columns: repeat( 2, 1fr );
+        align-items: center;
+    }
+}
+
+.app-img {
+    width: 50%;
+    margin: 0 auto;
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.app-img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.shops {
+    text-align: center;
+}
+
+.shops h3 {
+    color: var(--secondary);
+    margin: 0;
+}
+
+.shops-grid {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr );
+    gap: 2rem;
+}
+
+.shops-grid img {
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.shops-grid img:hover {
+    transform: scale(1.1);
+}
