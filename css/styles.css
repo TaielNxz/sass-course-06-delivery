@@ -218,7 +218,7 @@ h3 {
 }
 
 .steps-content {
-    margin: -1rem;
+    margin-top: -1rem;
     background-color: var(--primary); 
     padding-bottom: var(--separation);
 }
@@ -507,4 +507,76 @@ h3 {
 
 .shops-grid img:hover {
     transform: scale(1.1);
+}
+
+/* ==== Footer ==== */
+
+.footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    text-align: center;
+    padding: var(--separation) 0;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr );
+    }
+}
+
+.footer-widget {
+    margin-bottom: var(--separation);
+}
+
+@media (min-width: 768px) {
+    .footer-widget {
+        margin-bottom: 0;
+    }
+}
+
+.footer-widget h3 {
+    margin: 0;
+}
+
+.footer-widget p {
+    color: var(--white);
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .footer-widget p {
+        text-align: left;
+        margin-left: 4rem;
+    }
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.footer-nav a {
+    max-width: 22rem;
+    margin: 0 auto;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.footer-nav a:hover {
+    font-weight: 700;
+}
+
+.copyright {
+    background-color: var(--primary);
+    color: var(--white);
+
+    position: absolute;
+    bottom: 1;
+    padding: 2rem;
+    width: 100%;
+    overflow: hidden;
 }
